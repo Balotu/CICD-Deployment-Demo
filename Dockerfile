@@ -11,7 +11,7 @@ COPY . .
 
 
 # Stage 2: Production
-FROM node:16-alpine  # Slimmer base image for production
+FROM node:16-alpine AS production
 
 WORKDIR /app
 
