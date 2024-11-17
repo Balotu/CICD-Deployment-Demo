@@ -18,7 +18,7 @@ jobs:
           
       - name: Display Docker image size
         run: |
-          IMAGE_SIZE=$(docker images my-app-container:latest --format "{{.Size}}")
+          IMAGE_SIZE=$(docker images my-app:latest --format "{{.Size}}")
           echo "Docker Image Size: $IMAGE_SIZE"
 
       - name: Run Docker container
