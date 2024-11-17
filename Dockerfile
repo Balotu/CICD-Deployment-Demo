@@ -11,7 +11,7 @@ COPY . .
 
 
 # Stage 2: Production
-FROM node:16-alpine AS production
+FROM gcr.io/distroless/nodejs:16 AS production
 
 WORKDIR /app
 
