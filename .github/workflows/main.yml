@@ -30,7 +30,7 @@ jobs:
           port: ${{ secrets.PORT }}
             
           script: |
-            cd /CICD-Deployment-Demo
+            cd CICD-Deployment-Demo
             git pull origin main
             npm install
             npm start &
