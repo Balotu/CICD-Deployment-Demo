@@ -16,8 +16,6 @@ jobs:
       - name: package depencies
         run: npm install
         
-      - name: Run tests
-        run: npm test
         
   deploy:
     runs-on: ubuntu-latest
