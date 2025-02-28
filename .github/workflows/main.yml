@@ -21,6 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: node.js set-up
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.1
         with:
