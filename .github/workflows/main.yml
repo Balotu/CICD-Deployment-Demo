@@ -34,8 +34,12 @@ jobs:
           port: ${{ secrets.PORT }}
             
           script: |
-            source ~/.bashrc
-            npm --version || { echo "npm not found"; exit 1; }
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
+            nvm use 14
+            echo "Current PATH: $PATH"
+            echo "Node version: $(node -v)"
+            echo "NPM version: $(npm -v)"
             cd /CICD-Deployment-Demo
             git pull origin main
             npm install
